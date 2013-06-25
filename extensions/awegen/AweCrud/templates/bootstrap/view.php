@@ -36,8 +36,8 @@ $this->endWidget();
     'attributes' => array(
     <?php
     foreach ($this->tableSchema->columns as $column) {
-        if ($column->isForeignKey) {
             echo "\t\tarray(\n";
+            if ($column->isForeignKey) {
             echo "\t\t\t'name'=>'{$column->name}',\n";
             foreach ($this->relations as $key => $relation) {
                 if ((($relation[0] == "CHasOneRelation") || ($relation[0] == "CBelongsToRelation")) && $relation[2] == $column->name) {
@@ -54,14 +54,13 @@ $this->endWidget();
                     echo "\t\t\t'type'=>'html',\n";
                     break;
                 } else {
-                    echo "\t\t\t#'value'=>'',\n";
+                    echo "\t\t\t#'value'=>'{$column->name}',\n";
                     echo "\t\t\t#'type'=>'html',\n";
                 }
             }
             echo "\t\t),\n";
         }
         else
-            echo "\t\tarray(\n";
             echo "\t\t\t'name'=>'{$this->getDetailViewAttribute($column)}',\n";
             echo "\t\t\t'label'=>'{$this->getDetailViewAttribute($column)}',\n";
             echo "\t\t\t'value'=>'\$model->{$this->getDetailViewAttribute($column)}',\n";
