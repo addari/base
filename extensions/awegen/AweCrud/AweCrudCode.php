@@ -142,6 +142,23 @@ public function getNMField($relation, $relatedModelClass, $modelClass) {
 
     $foreign_identificationColumn = self::getIdentificationColumnFromTableSchema(CActiveRecord::model($relation[1])->getTableSchema());
     $friendlyName = ucfirst($relatedModelClass);
+
+$str="<div class=\"control-group\">
+   <?php echo $form->labelEx($model, echo Yii::t('app', '$friendlyName'), array('class' => 'control-label')); ?>
+   <div class=\"controls\">
+       <?php
+           echo $form->dropDownList($model, '{$modelClass}[{$relatedModelClass}]', 
+            CHtml::listData({$relation[1]}::model()->findAll(), '{$foreign_pk}', '{$foreign_identificationColumn}'), array(
+               'multiple' => true,
+               #'prompt'=>'--Selecione--',
+               )
+           );
+       ?>
+   </div>
+</div>\n";
+
+/*
+
     $str = "<label for=\"$relatedModelClass\"><?php echo Yii::t('app', '$friendlyName'); ?></label>\n";
     $str .="<div class='controls'>";
     $str .= "<?php echo CHtml::checkBoxList('{$modelClass}[{$relatedModelClass}]',\n
@@ -153,7 +170,7 @@ array( 'attributeitem' => 'id',\n
  'container' => 'div',\n
  'template' => '{input} {labelTitle}',\n
  'checkAll' => Yii::t('app', 'Select All'))); ?>\n
-</div>\n";
+</div>";*/
 return $str;
 }
 

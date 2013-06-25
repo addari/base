@@ -61,7 +61,7 @@ $this->endWidget();
         }
         else
             //echo $this->getDetailViewAttribute($column);
-            echo "\t\t\t'value'=>'\$model->{$column->name}',\n";
+            echo "\t\t\t'value'=>\$model->{$column->name},\n";
         echo "\t\t\t'type'=>'html',\n";
         echo "\t\t\t'label'=>'$this->modelClass.{$column->name}',\n";
             echo "\t\t),\n";
