@@ -69,7 +69,6 @@ $this->endWidget();
             //echo $this->getDetailViewAttribute($column);
     }
     echo ")));";
-
     echo "?>";
     ?>
     S
