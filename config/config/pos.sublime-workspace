@@ -1,0 +1,712 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"icon-ta",
+				"icon-tags"
+			],
+			[
+				"y",
+				"yinput	yii Input"
+			],
+			[
+				"ya",
+				"yalerterror	yii Alert Error"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/var/www/base/extensions/bootstrap/widgets/TbTabs.php",
+			"settings":
+			{
+				"buffer_size": 5476,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/pos/themes/admin/views/site/index.php",
+			"settings":
+			{
+				"buffer_size": 14181,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/base/extensions/bootstrap/widgets/TbSelect2.php",
+			"settings":
+			{
+				"buffer_size": 3038,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/base/extensions/bootstrap/widgets/TbGridView.php",
+			"settings":
+			{
+				"buffer_size": 5298,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/base/yii/framework/web/form/CFormElement.php",
+			"settings":
+			{
+				"buffer_size": 4706,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/base/yii/framework/web/helpers/CHtml.php",
+			"settings":
+			{
+				"buffer_size": 104623,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/pos/themes/admin/css/main.css",
+			"settings":
+			{
+				"buffer_size": 985,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/var/www/pos/themes/admin/views/layouts/_header.php",
+			"settings":
+			{
+				"buffer_size": 5492,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n        <meta name=\"language\" content=\"en\" />\n        <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>\n        <title><?php echo CHtml::encode($this->pageTitle); ?></title>\n        <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"<?php echo Yii::app()->theme->baseUrl; ?>/css/main.css\"  />\n        <link rel=\"stylesheet\" type=\"text/css\" media=\"print\" href=\"<?php echo Yii::app()->theme->baseUrl; ?>/css/print.css\" />\n        <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap.min.css\" />\n        <link href=\"//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css\" type=\"text/css\" rel=\"stylesheet\">\n    </head>\n    <body class=''>\n\n        </br>\n        </br>\n        </br>\n        <?php $this->renderPartial('//layouts/_header') ?>\n        <?php echo $content ?>\n        <?php $this->renderPartial('//layouts/_footer') ?>\n    </body>\n</html>",
+			"file": "/var/www/pos/themes/admin/views/layouts/main.php",
+			"file_size": 1061,
+			"file_write_time": 1371841059000000,
+			"settings":
+			{
+				"buffer_size": 1070,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/pos/themes/admin/css/bootstrap.min.css",
+			"settings":
+			{
+				"buffer_size": 114111,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/pos/protected/messages/es/app.php",
+			"settings":
+			{
+				"buffer_size": 9911,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/pos/protected/messages/en/app.php",
+			"settings":
+			{
+				"buffer_size": 9092,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/isret/protected/messages/es/zii.php",
+			"settings":
+			{
+				"buffer_size": 2300,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/var/www/isret/protected/messages/es/app.php",
+			"settings":
+			{
+				"buffer_size": 4047,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 285.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package ",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/pos/themes/admin/views/layouts/column2.php",
+		"/var/www/base/yii/framework/web/form/CFormInputElement.php",
+		"/var/www/base/yii/framework/web/form/CForm.php",
+		"/home/abolivar/.config/sublime-text-2/Packages/Alignment/Default (Linux).sublime-keymap",
+		"/home/abolivar/.config/sublime-text-2/Packages/Alignment/Base File.sublime-settings",
+		"/var/www/base/config/config/import.php",
+		"/var/www/base/config/config/modules.php",
+		"/home/abolivar/Desktop/Base.sublime-project",
+		"/home/abolivar/Desktop/untitled.php",
+		"/home/abolivar/Desktop/untitled.html",
+		"/var/www/test/protected/views/layouts/main.php",
+		"/var/www/test/css/bootstrap.min.css",
+		"/var/www/base/extensions/bootstrap/widgets/TbEditableField.php",
+		"/var/www/base/extensions/bootstrap/widgets/TbGridView.php",
+		"/var/www/base/extensions/bootstrap/widgets/TbDataColumn.php",
+		"/var/www/base/extensions/bootstrap/widgets/TbEditableDetailView.php",
+		"/home/abolivar/Downloads/style.css",
+		"/home/abolivar/Downloads/bt/components/3.0.0-wip/bootstrap/css/bootstrap.css",
+		"/var/www/isret/protected/views/retTrRepor/_form.php",
+		"/var/www/advanced/api/config/env/dev.php",
+		"/var/www/advanced/backend/config/env/dev.php",
+		"/var/www/advanced/common/config/env/dev.php",
+		"/var/www/advanced/console/config/env/dev.php",
+		"/var/www/advanced/frontend/config/env/dev.php",
+		"/var/www/isret/protected/config/main.php",
+		"/var/www/pos/protected/config/dbconnect.php",
+		"/var/www/pos/protected/config/routes.php",
+		"/var/www/pos/protected/config/main.php",
+		"/var/www/base/config/config/components.php",
+		"/var/www/base/views/layouts/main.php",
+		"/var/www/sige/protected/views/trackTrTracking/reporte1-bak.php",
+		"/var/www/sige/protected/views/trackTrTracking/reporte1_pdf.php",
+		"/var/www/base/extensions/pdf/EPDFGrid.php",
+		"/var/www/basic/www/index.php",
+		"/var/www/test/protected/config/db.php",
+		"/var/www/sige/protected/models/ViewReport1.php",
+		"/var/www/sige/protected/models/TrackTrTracking.php",
+		"/var/www/sige/protected/models/_base/BaseTrackTrTracking.php",
+		"/var/www/sige/protected/controllers/TrackTrTrackingController.php",
+		"/var/www/sige/protected/views/trackTrTracking/expenseGridtoReport.php",
+		"/var/www/sige/protected/controllers/ContaMaCtasController.php",
+		"/var/www/basic/app/config/env/dev.php",
+		"/var/www/base/config/config/params.php",
+		"/var/www/basic/app/views/layouts/main.php",
+		"/var/www/base/yii/framework/zii/widgets/grid/CGridView.php",
+		"/var/www/sige/air/kappa_insert.php",
+		"/var/www/sige/protected/config/main.php",
+		"/var/www/sige/protected/views/trackTrTracking/view.php",
+		"/var/www/base/config/config/aliases.php",
+		"/var/www/base/extensions/bootstrap/components/TbApi.php",
+		"/var/www/pos/protected/controllers/CategoryController.php",
+		"/var/www/pos/themes/admin/views/layouts/_header.php",
+		"/var/www/base/extensions/bootstrap/components/Bootstrap.php",
+		"/var/www/base/extensions/bootstrap/widgets/TbNavbar.php",
+		"/var/www/pos/themes/admin/views/category/_form.php",
+		"/var/www/sigeinvoice/index.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"multiple",
+			"align",
+			"select2",
+			"clien"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/var/www/base/extensions/bootstrap/widgets/TbTabs.php",
+					"settings":
+					{
+						"buffer_size": 5476,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 796.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/var/www/pos/themes/admin/views/site/index.php",
+					"settings":
+					{
+						"buffer_size": 14181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								408,
+								408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/var/www/base/extensions/bootstrap/widgets/TbSelect2.php",
+					"settings":
+					{
+						"buffer_size": 3038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1607,
+								1607
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 990.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/var/www/base/extensions/bootstrap/widgets/TbGridView.php",
+					"settings":
+					{
+						"buffer_size": 5298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3793,
+								3793
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/var/www/base/yii/framework/web/form/CFormElement.php",
+					"settings":
+					{
+						"buffer_size": 4706,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/var/www/base/yii/framework/web/helpers/CHtml.php",
+					"settings":
+					{
+						"buffer_size": 104623,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72787,
+								72787
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 30499.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/var/www/pos/themes/admin/css/main.css",
+					"settings":
+					{
+						"buffer_size": 985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								903,
+								903
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 538.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/var/www/pos/themes/admin/views/layouts/_header.php",
+					"settings":
+					{
+						"buffer_size": 5492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/var/www/pos/themes/admin/views/layouts/main.php",
+					"settings":
+					{
+						"buffer_size": 1070,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1070,
+								1070
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/var/www/pos/themes/admin/css/bootstrap.min.css",
+					"settings":
+					{
+						"buffer_size": 114111,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1356,
+								1356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 7620.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/var/www/pos/protected/messages/es/app.php",
+					"settings":
+					{
+						"buffer_size": 9911,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/var/www/pos/protected/messages/en/app.php",
+					"settings":
+					{
+						"buffer_size": 9092,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2188.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/var/www/isret/protected/messages/es/zii.php",
+					"settings":
+					{
+						"buffer_size": 2300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 29.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/var/www/isret/protected/messages/es/app.php",
+					"settings":
+					{
+						"buffer_size": 4047,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								805,
+								805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 212.0,
+	"status_bar_visible": true
+}
