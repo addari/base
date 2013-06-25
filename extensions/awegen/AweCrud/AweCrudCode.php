@@ -311,9 +311,11 @@ public function generateGridViewColumn($column) {
         }
 
         return "array(
+            #'header'=>'{$column->name}',
             'name'   => '{$column->name}',
             'value'  => 'isset(\$data->{$relatedColumnName})?\$data->{$relatedColumnName}:\"N/A\"',
             'filter' => $filter,
+            'htmlOptions' => array('style' => 'text-align:center;min-width:20px;')
             )";
 }
 
@@ -321,24 +323,34 @@ public function generateGridViewColumn($column) {
 if (strtoupper($column->dbType) == 'TINYINT(1)' || strtoupper($column->dbType) == 'BIT' || strtoupper($column->dbType) == 'BOOL' || strtoupper($column->dbType) == 'BOOLEAN') {
     if ($this->isJToggleColumnEnabled) {
         return "array(
-            'class' => 'boostrap.widgets.TbToggleColumn',
+            #'header'=>'{$column->name}',
+            'name' => '{$column->name}',
             'tongleAction' => '',
             'checkedIcon'=>'icon-ok text-success',
             'uncheckedIcon'=>'icon-remove text-error',
-            'name' => '{$column->name}',
+            'class' => 'boostrap.widgets.TbToggleColumn',
             'filter' => array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')),
             'htmlOptions' => array('style' => 'text-align:center;min-width:20px;')
             )";
 }
 else
     return "array(
+        #'header'=>'{$column->name}',
         'name' => '{$column->name}',
         'value' => '(\$data->{$column->name} === 0) ? Yii::t(\\'app\\', \\'No\\') : Yii::t(\\'app\\', \\'Yes\\')',
         'filter' => array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')),
+        'htmlOptions' => array('style' => 'text-align:center;min-width:20px;')
         )";
 }
         else // Common column.
-        return "'{$column->name}'";
+        return "array(
+            #'header'=>'{$column->name}',
+            'name' =>'{$column->name}',
+            'value'=>'\$data->{$column->name}',
+            #'filter'=>'false',
+            #'htmlOptions' => array('style' => 'text-align:center;min-width:20px;')
+
+            )";
     }
 
     public function getRelations() {

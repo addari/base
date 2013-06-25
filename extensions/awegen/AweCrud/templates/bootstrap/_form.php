@@ -40,9 +40,9 @@
 
     foreach ($this->getRelations() as $relatedModelClass => $relation) {
         if ($relation[0] == 'CManyManyRelation') {
-            echo "<div class='control-group'>";
+ 
             echo $this->getNMField($relation, $relatedModelClass, $this->modelClass);
-            echo "</div>\n\n";
+            echo "\n";
         }
     }
     ?>

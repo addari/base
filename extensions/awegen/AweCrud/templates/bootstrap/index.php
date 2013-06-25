@@ -59,13 +59,8 @@ $this->endWidget();
 'columns' => array(
 <?php
 foreach ($this->tableSchema->columns as $column) {
-  echo "array(\n
-        'name'  =>'" . $this->generateGridViewColumn($column) . "',\n
-        #'title' =>'" . $this->generateGridViewColumn($column) . "',\n
-        #'htmlOptions' =>'array()',\n
-            
+  echo  $this->generateGridViewColumn($column).",\n";
 
-      ),\n";
 }
 ?>
 array(

@@ -1,8 +1,8 @@
 <?php
 echo "<?php\n";
-$nameColumn=$this->getIdentificationColumn();
-$label_plural="Yii::t('title','".$this->modelClass."s')";
-$label_singular="Yii::t('title','".$this->modelClass."')";
+$nameColumn = $this->getIdentificationColumn();
+$label_plural = "Yii::t('title','" . $this->modelClass . "s')";
+$label_singular = "Yii::t('title','" . $this->modelClass . "')";
 echo "\$this->breadcrumbs=array(
 	$label_plural=>array('index'),
 	\$model->{$nameColumn},
@@ -13,24 +13,25 @@ echo "\$this->breadcrumbs=array(
 <hr />
 <?php echo "<?php"; ?> 
 $this->beginWidget('zii.widgets.CPortlet', array(
-	'htmlOptions'=>array(
-		'class'=>''
-	)
+'htmlOptions'=>array(
+'class'=>''
+)
 ));
 $this->widget('bootstrap.widgets.TbMenu', array(
-	'type'=>'pills',
-	'items'=>array(
-		array('label'=>Yii::t('app','Create'), 'icon'=>'icon-plus', 'url'=>Yii::app()->controller->createUrl('create'), 'linkOptions'=>array()),
-                array('label'=>Yii::t('app','List'), 'icon'=>'icon-th-list', 'url'=>Yii::app()->controller->createUrl('index'), 'linkOptions'=>array()),
-                array('label'=>Yii::t('app','Update'), 'icon'=>'icon-edit', 'url'=>Yii::app()->controller->createUrl('update',array('id'=>$model->id)), 'linkOptions'=>array()),
-		//array('label'=>Yii::t('app','Search'), 'icon'=>'icon-search', 'url'=>'#', 'linkOptions'=>array('class'=>'search-button')),
-		array('label'=>Yii::t('app','Print'), 'icon'=>'icon-print', 'url'=>'javascript:void(0);return false', 'linkOptions'=>array('onclick'=>'printDiv();return false;')),
+'type'=>'pills',
+'items'=>array(
+array('label'=>Yii::t('app','Create'), 'icon'=>'icon-plus', 'url'=>Yii::app()->controller->createUrl('create'), 'linkOptions'=>array()),
+array('label'=>Yii::t('app','List'), 'icon'=>'icon-th-list', 'url'=>Yii::app()->controller->createUrl('index'), 'linkOptions'=>array()),
+array('label'=>Yii::t('app','Update'), 'icon'=>'icon-edit', 'url'=>Yii::app()->controller->createUrl('update',array('id'=>$model->id)), 'linkOptions'=>array()),
+//array('label'=>Yii::t('app','Search'), 'icon'=>'icon-search', 'url'=>'#', 'linkOptions'=>array('class'=>'search-button')),
+array('label'=>Yii::t('app','Print'), 'icon'=>'icon-print', 'url'=>'javascript:void(0);return false', 'linkOptions'=>array('onclick'=>'printDiv();return false;')),
 
 )));
 $this->endWidget();
 ?>
 <div class='printableArea'>
 
+<<<<<<< HEAD
 <?php echo '<?php'; ?> $this->widget('bootstrap.widgets.TbDetailView', array(
 'data' => $model,
 'attributes' => array(
@@ -64,10 +65,52 @@ echo ")));";
 
 echo "?>";
 ?>
+=======
+    <?php echo '<?php'; ?> $this->widget('bootstrap.widgets.TbDetailView', array(
+    'data' => $model,
+    'attributes' => array(
+    <?php
+    foreach ($this->tableSchema->columns as $column) {
+            echo "\t\tarray(\n";
+            echo "\t\t\t'name'=>'{$column->name}',\n";
+        if ($column->isForeignKey) {
+            foreach ($this->relations as $key => $relation) {
+                if ((($relation[0] == "CHasOneRelation") || ($relation[0] == "CBelongsToRelation")) && $relation[2] == $column->name) {
+                    $relatedModel = CActiveRecord::model($relation[1]);
+                    $identificationColumn = AweCrudCode::getIdentificationColumnFromTableSchema($relatedModel->tableSchema);
+                    $controller = $this->resolveController($relation);
+                    $value = "(\$model->{$key} !== null)?";
+
+                    $value .= "CHtml::link(\$model->{$key}->$identificationColumn, array('" . Awecms::getPrimaryKey($relatedModel) . "/view','" . Awecms::getPrimaryKey($relatedModel) . "'=>\$model->{$key}->" . Awecms::getPrimaryKey($relatedModel) . ")).' '";
+                    //$value .= ".CHtml::link(Yii::t('app','Update'), array('{$controller}/update','{$relatedModel->tableSchema->primaryKey}'=>\$model->{$key}->{$relatedModel->tableSchema->primaryKey}), array('class'=>'edit'))";
+                    $value .= ":'n/a'";
+
+                    echo "\t\t\t'value'=>{$value},\n";
+
+                    break;
+                } else {
+                    echo "\t\t\t#'value'=>'',\n";
+                    echo "\t\t\t#'type'=>'html',\n";
+                }
+            }
+        }
+        else
+            //echo $this->getDetailViewAttribute($column);
+            echo "\t\t\t'value'=>'\$model->{$column->name}',\n";
+        echo "\t\t\t'type'=>'html',\n";
+        echo "\t\t\t'label'=>'$this->modelClass.{$column->name}',\n";
+            echo "\t\t),\n";
+
+    }
+    echo ")));";
+
+    echo "?>";
+    ?>
+>>>>>>> bf574d0... Actualizacion de templates
 </div>
 <style type="text/css" media="print">
-body {visibility:hidden;}
-.printableArea{visibility:visible;} 
+    body {visibility:hidden;}
+    .printableArea{visibility:visible;} 
 </style>
 <script type="text/javascript">
 function printDiv()
