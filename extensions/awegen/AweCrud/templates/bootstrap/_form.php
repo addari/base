@@ -1,6 +1,6 @@
 <div class="form">
     <div class='well well-small'>
-     <?php '<?php echo Yii::t('app','Fields with') ?> <span class="required">*</span> <?php echo Yii::t('app','are required.') ?>' ?>
+        <?php "<?php echo Yii::t('app','Fields with') ?> <span class=\"required\">*</span> <?php echo Yii::t('app','are required.') ?>" ?>
  </div>
 
 
@@ -40,7 +40,7 @@
 
 foreach ($this->getRelations() as $relatedModelClass => $relation) {
     if ($relation[0] == 'CManyManyRelation') {
-       
+
         echo $this->getNMField($relation, $relatedModelClass, $this->modelClass);
         echo "\n";
     }
