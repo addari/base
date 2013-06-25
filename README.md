@@ -12,7 +12,7 @@ Base para aplicaciones Yii:
 
 - TCPDF (www.tcpdf.org)
 
-- Select2 (https://github.com/ivaynberg/select2) Agregado: 11/04/2013
+- Select2 (https://github.com/anggiaj/ESelect2.git)
 
 - activerecord-relation-behavior (http://www.yiiframework.com/extension/activerecord-relation-behavior/)
 
