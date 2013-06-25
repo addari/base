@@ -64,7 +64,7 @@ $this->endWidget();
             echo "\t\tarray(\n";
             echo "\t\t\t'name'=>'{$this->getDetailViewAttribute($column)}',\n";
             echo "\t\t\t'label'=>'{$this->getDetailViewAttribute($column)}',\n";
-            echo "\t\t\t'value'=>'$model->{$this->getDetailViewAttribute($column)}',\n";
+            echo "\t\t\t'value'=>'\$model->{$this->getDetailViewAttribute($column)}',\n";
             echo "\t\t\t'type'=>'html',\n";
             echo "\t\t),\n";
             //echo $this->getDetailViewAttribute($column);
