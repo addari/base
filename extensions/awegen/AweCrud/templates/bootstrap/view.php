@@ -72,6 +72,7 @@ $this->endWidget();
 
     echo "?>";
     ?>
+    S
 </div>
 <style type="text/css" media="print">
     body {visibility:hidden;}
