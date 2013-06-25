@@ -54,8 +54,8 @@ $this->endWidget();
                     echo "\t\t\t'type'=>'html',\n";
                     break;
                 } else {
-                    echo "\t\t\t#'value'=>'{$column->name}',\n";
-                    echo "\t\t\t#'type'=>'html',\n";
+                    echo "\t\t\t#1111'value'=>'{$column->name}',\n";
+                    echo "\t\t\t#1111'type'=>'html',\n";
                 }
             }
             echo "\t\t),\n";
