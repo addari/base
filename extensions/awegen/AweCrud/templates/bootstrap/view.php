@@ -54,8 +54,8 @@ $this->endWidget();
                     echo "\t\t\t'type'=>'html',\n";
                     break;
                 } else {
-                    echo "\t\t\t//'value'=>{$value},\n";
-                    echo "\t\t\t//'type'=>'html',\n";
+                    echo "\t\t\t#'value'=>'',\n";
+                    echo "\t\t\t#'type'=>'html',\n";
                 }
             }
             echo "\t\t),\n";
