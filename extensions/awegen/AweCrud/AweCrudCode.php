@@ -144,7 +144,7 @@ public function getNMField($relation, $relatedModelClass, $modelClass) {
     $friendlyName = ucfirst($relatedModelClass);
 
 $str="<div class=\"control-group\">
-   <?php echo $form->labelEx($model, echo Yii::t('app', '$friendlyName'), array('class' => 'control-label')); ?>
+   <?php echo \$form->labelEx($model, echo Yii::t('app', '$friendlyName'), array('class' => 'control-label')); ?>
    <div class=\"controls\">
        <?php
            echo $form->dropDownList($model, '{$modelClass}[{$relatedModelClass}]', 
