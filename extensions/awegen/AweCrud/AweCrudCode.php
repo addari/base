@@ -144,10 +144,10 @@ public function getNMField($relation, $relatedModelClass, $modelClass) {
     $friendlyName = ucfirst($relatedModelClass);
 
 $str="<div class=\"control-group\">
-   <?php echo \$form->labelEx($model, echo Yii::t('app', '$friendlyName'), array('class' => 'control-label')); ?>
+   <?php echo \$form->labelEx(\$model, echo Yii::t('app', '$friendlyName'), array('class' => 'control-label')); ?>
    <div class=\"controls\">
        <?php
-           echo $form->dropDownList($model, '{$modelClass}[{$relatedModelClass}]', 
+           echo $form->dropDownList(\$model, '{$modelClass}[{$relatedModelClass}]', 
             CHtml::listData({$relation[1]}::model()->findAll(), '{$foreign_pk}', '{$foreign_identificationColumn}'), array(
                'multiple' => true,
                #'prompt'=>'--Selecione--',
