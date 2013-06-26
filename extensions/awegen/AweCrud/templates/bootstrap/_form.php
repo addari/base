@@ -1,6 +1,6 @@
 <div class="form">
     <div class='well well-small'>
-        <?php echo "<?php echo Yii::t('app','Fields with') ?> <span class=\"required\">*</span> <?php echo Yii::t('app','are required.') ?>" ?>
+        <?php echo "<?php echo Yii::t('app','Fields with') ?> <span class=\"required\">*</span> <?php echo Yii::t('app','are required'). ?>" ?>
  </div>
 
 

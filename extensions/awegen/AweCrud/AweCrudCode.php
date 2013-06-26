@@ -208,7 +208,7 @@ public function generateField($column, $modelClass, $search = false) {
             }
             //requires EActiveRecordRelationBehavior
             //return "echo \$form->dropDownList(\$model, '{$relation[0]}', CHtml::listData({$relation[3]}::model()->findAll(),'{$foreign_pk}', '{$foreign_identificationColumn}'){$prompt})";
-            return "    \$this->widget('ext.select2.ESelect2', array(
+            return "    \$this->widget('boostrap.widget.TbSelect2', array(
                 'model' => \$model,
                 'attribute' => '{$relation[0]}',
                 'data' => CHtml::encodeArray(CHtml::listData({$relation[3]}::model()->findAll(), '{$foreign_pk}', '{$foreign_identificationColumn}')),
