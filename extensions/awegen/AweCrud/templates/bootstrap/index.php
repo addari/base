@@ -51,10 +51,13 @@ $this->endWidget();
 	'model'=>\$model,
 )); ?>\n"; ?>
 </div><!-- search-form -->
-<?php echo '<?php'; ?> $this->widget('bootstrap.widgets.TbGridView', array(
+<?php echo '<?php'; ?> 
+$provider=$model->search();
+$provider->pagination->pageSize=10;
+$this->widget('bootstrap.widgets.TTbExtendedGridView', array(
 'id' => '<?php echo $this->class2id($this->modelClass); ?>-grid',
 'type'=>'striped bordered condensed',
-'dataProvider' => $model->search(),
+'dataProvider' => $provider,
 'filter' => $model,
 'columns' => array(
 <?php
