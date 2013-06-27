@@ -197,12 +197,12 @@ class EMBMenubuilderModule extends CWebModule
     /**
      * Register the cookie script for collapse in bootstrap theme
      */
-    public function registerBootstrapCollapseCookie($targetId,$show=false)
+    public function registerBootstrapCollapseCookie($targetId,$show=false,$jsAssetsPosition=2)
     {
        if(!$this->_collapseRegistered)
        {
            $assets = $this->getAssetsPath();
-           Yii::app()->getClientScript()->registerScriptFile($assets . '/jquery.cookie.js');
+           Yii::app()->getClientScript()->registerScriptFile($assets . '/jquery.cookie.js',Yii::app()->clientScript->coreScriptPosition);
            $this->_collapseRegistered=true;
        }
 

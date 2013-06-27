@@ -20,11 +20,22 @@
 	"buffers":
 	[
 		{
-			"file": "/var/www/base/extensions/bootstrap/widgets/TbTabs.php",
+			"file": "/var/www/pos/protected/config/main.php",
 			"settings":
 			{
-				"buffer_size": 5476,
+				"buffer_size": 4512,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n$this->widget('bootstrap.widgets.TbNavbar',array(\n    'fixed'=>'top',\n    'fluid'=>true,\n    //'brand'=>false,\n    'brand'=>AppConfig::getCompany(),\n    'collapse'=>false, // requires bootstrap-responsive.css\n    'htmlOptions'=>array(\n        //'id'=>'topbar'\n    ),\n    'items'=>array(\n        array(\n            'class'=>'bootstrap.widgets.TbMenu',\n            'htmlOptions'=>array('class'=>'pull-right'),\n            'encodeLabel'=>false,\n            'items'=>array(\n                array('label' => Yii::t('app','Dashboard'), 'url'=>array('/auth'), 'visible'=>Yii::app()->user->isAdmin ),\n\n                //\n                array('label' => Yii::t('app','Settings'),'icon'=>'wrench', 'items'=>array(\n                    array('label' => Yii::t('app','Auth'), 'url'=>array('/auth'), 'visible'=>Yii::app()->user->isAdmin ),\n                    array('label' => Yii::t('app','User'), 'url' => array('/user/admin'), 'visible'=>Yii::app()->user->isAdmin ),\n                    array('label' => Yii::t('app','App Config'), 'url'=>array('/appConfig/admin'), ),\n                ), ),\n                // settings module\n                array('label' => Yii::t('app','Settings'),'icon'=>'wrench', 'items'=>array(\n                    array('label' => Yii::t('app','Auth'), 'url'=>array('/auth'), 'visible'=>Yii::app()->user->isAdmin ),\n                    array('label' => Yii::t('app','User'), 'url' => array('/user/admin'), 'visible'=>Yii::app()->user->isAdmin ),\n                    array('label' => Yii::t('app','App Config'), 'url'=>array('/appConfig/admin'), ),\n                ), ),\n                // user module\n                array('url'=>Yii::app()->getModule('user')->loginUrl, 'label'=>Yii::app()->getModule('user')->t(\"Login\"), 'visible'=>Yii::app()->user->isGuest),\n                array('url'=>Yii::app()->getModule('user')->profileUrl, 'label'=>Yii::app()->getModule('user')->t(\"Profile\"),'icon'=>'user', 'visible'=>!Yii::app()->user->isGuest,'items'=>array(\n                    array('label'=>Yii::app()->getModule('user')->t(\"Profile\"),'icon'=>'user', 'url'=>Yii::app()->getModule('user')->profileUrl),\n                    array('url'=>Yii::app()->getModule('user')->logoutUrl,'icon'=>'off', 'label'=>Yii::app()->getModule('user')->t(\"Logout\").' ('.Yii::app()->user->name.')', 'visible'=>!Yii::app()->user->isGuest),\n                    //array('label'=>Yii::t('app','Events Calendar'), 'url'=>array('/calendar'))\n                )),\n            )\n        ),\n    ),\n));\n\n\n/*\n\n\n$this->widget('bootstrap.widgets.TbNavbar',array(\n    'fixed'=>'top',\n    'fluid'=>true,\n    //'brand'=>false,\n    'brand'=>false,\n    'collapse'=>false, // requires bootstrap-responsive.css\n    'htmlOptions'=>array(\n        'id'=>'main-menu'\n    ),\n    'items' => array(\n        //$this->renderPartial('//layouts/shared/_quicksearch',null,true),\n        array(\n            'class'=>'bootstrap.widgets.TbMenu',\n            'htmlOptions'=>array('class'=>'pull-left'),\n            'encodeLabel'=>false,\n            'activateParents'=>true,\n            'items'=>array(\n                array('label' => Yii::t('zii','Dashboard'),'icon'=>'th', 'url' => array('/site/index')),\n                array('label' => Yii::t('app','Receiving'),'icon'=>'tag', 'url' => array('/receiving/index')),\n                array('label' => Yii::t('app','Sales'),'icon'=>'tags', 'url' => array('/sales/index')),\n                array('label' => Yii::t('app','Reports'),'icon'=>'signal', 'items'=>array(\n                    array('label' => Yii::t('app','Graphical'), 'items'=>array(\n                        array('label' => Yii::t('app','Quantity Low'), 'url' => array('/reports/quantitylow','graph'=>'true')),\n                        array('label' => Yii::t('app','Top Sales Employee'), 'url' => array('/reports/topsalesemployee','graph'=>'true')),\n                        array('label' => Yii::t('app','Item/s Sales'), 'url' => array('/reports/itemssales','graph'=>'true')),\n                        array('label' => Yii::t('app','Most Active Item'), 'url' => array('/reports/mostactiveitem','graph'=>'true')),\n                    )),\n                    array('label' => Yii::t('app','Text'), 'items'=>array(\n                        array('label' => Yii::t('app','Quantity Low'), 'url' => array('/reports/quantitylow')),\n                        array('label' => Yii::t('app','Sales Details'), 'url' => array('/reports/salesdetails')),\n                        array('label' => Yii::t('app','Sales Item Details'), 'url' => array('/reports/salesitemdetails')),\n                        array('label' => Yii::t('app','Receiving Details'), 'url' => array('/reports/receivingdetails')),\n                        array('label' => Yii::t('app','Receiving Item Details'), 'url' => array('/reports/receivingitemdetails')),\n                        array('label' => Yii::t('app','Top Sales Employee'), 'url' => array('/reports/topsalesemployee')),\n                        array('label' => Yii::t('app','Item/s Sales'), 'url' => array('/reports/itemssales')),\n                        array('label' => Yii::t('app','Most Active Item'), 'url' => array('/reports/mostactiveitem')),\n                        array('label' => Yii::t('app','Find Purchase'), 'url' => array('/reports/findpurchase')),\n                        array('label' => Yii::t('app','Find Invoice'), 'url' => array('/reports/findinvoice')),\n                    )),\n                )),\n                array('label'=> Yii::t('app','Product'),'icon'=>'hdd','url' => array('/item/admin')),\n                array('label' => Yii::t('app','Person'),'icon'=>'user', 'url' => array('/person/admin')),\n                array('label' => Yii::t('app','Parameter Type'),'icon'=>'bookmark', 'items'=>array(\n                    array('label' => Yii::t('app','Category Group'),'url'=>array('/categoryGroup/admin')),\n                    array('label' => Yii::t('app','Category'), 'url' => array('/category/admin')),\n                    array('label' => Yii::t('app','Payment Type'),'url'=>array('/paymentType/admin')),\n                )),\n                \n            ),\n        ),\n    ),\n));*/\n?>\n",
+			"file": "/var/www/pos/themes/admin/views/layouts/_header.php",
+			"file_size": 5583,
+			"file_write_time": 1371662451000000,
+			"settings":
+			{
+				"buffer_size": 6103,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -32,105 +43,6 @@
 			"settings":
 			{
 				"buffer_size": 14181,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/base/extensions/bootstrap/widgets/TbSelect2.php",
-			"settings":
-			{
-				"buffer_size": 3038,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/base/extensions/bootstrap/widgets/TbGridView.php",
-			"settings":
-			{
-				"buffer_size": 5298,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/base/yii/framework/web/form/CFormElement.php",
-			"settings":
-			{
-				"buffer_size": 4706,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/base/yii/framework/web/helpers/CHtml.php",
-			"settings":
-			{
-				"buffer_size": 104623,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/pos/themes/admin/css/main.css",
-			"settings":
-			{
-				"buffer_size": 985,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/var/www/pos/themes/admin/views/layouts/_header.php",
-			"settings":
-			{
-				"buffer_size": 5492,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n        <meta name=\"language\" content=\"en\" />\n        <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>\n        <title><?php echo CHtml::encode($this->pageTitle); ?></title>\n        <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"<?php echo Yii::app()->theme->baseUrl; ?>/css/main.css\"  />\n        <link rel=\"stylesheet\" type=\"text/css\" media=\"print\" href=\"<?php echo Yii::app()->theme->baseUrl; ?>/css/print.css\" />\n        <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"<?php echo Yii::app()->theme->baseUrl; ?>/css/bootstrap.min.css\" />\n        <link href=\"//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css\" type=\"text/css\" rel=\"stylesheet\">\n    </head>\n    <body class=''>\n\n        </br>\n        </br>\n        </br>\n        <?php $this->renderPartial('//layouts/_header') ?>\n        <?php echo $content ?>\n        <?php $this->renderPartial('//layouts/_footer') ?>\n    </body>\n</html>",
-			"file": "/var/www/pos/themes/admin/views/layouts/main.php",
-			"file_size": 1061,
-			"file_write_time": 1371841059000000,
-			"settings":
-			{
-				"buffer_size": 1070,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/pos/themes/admin/css/bootstrap.min.css",
-			"settings":
-			{
-				"buffer_size": 114111,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/pos/protected/messages/es/app.php",
-			"settings":
-			{
-				"buffer_size": 9911,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/pos/protected/messages/en/app.php",
-			"settings":
-			{
-				"buffer_size": 9092,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/isret/protected/messages/es/zii.php",
-			"settings":
-			{
-				"buffer_size": 2300,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/var/www/isret/protected/messages/es/app.php",
-			"settings":
-			{
-				"buffer_size": 4047,
 				"line_ending": "Unix"
 			}
 		}
@@ -167,6 +79,20 @@
 	},
 	"file_history":
 	[
+		"/var/www/base/extensions/bootstrap/widgets/TbTabs.php",
+		"/var/www/pos/themes/admin/views/site/index.php",
+		"/var/www/base/extensions/bootstrap/widgets/TbSelect2.php",
+		"/var/www/base/extensions/bootstrap/widgets/TbGridView.php",
+		"/var/www/base/yii/framework/web/form/CFormElement.php",
+		"/var/www/base/yii/framework/web/helpers/CHtml.php",
+		"/var/www/pos/themes/admin/css/main.css",
+		"/var/www/pos/themes/admin/views/layouts/_header.php",
+		"/var/www/pos/themes/admin/views/layouts/main.php",
+		"/var/www/pos/themes/admin/css/bootstrap.min.css",
+		"/var/www/pos/protected/messages/es/app.php",
+		"/var/www/pos/protected/messages/en/app.php",
+		"/var/www/isret/protected/messages/es/zii.php",
+		"/var/www/isret/protected/messages/es/app.php",
 		"/var/www/pos/themes/admin/views/layouts/column2.php",
 		"/var/www/base/yii/framework/web/form/CFormInputElement.php",
 		"/var/www/base/yii/framework/web/form/CForm.php",
@@ -180,7 +106,6 @@
 		"/var/www/test/protected/views/layouts/main.php",
 		"/var/www/test/css/bootstrap.min.css",
 		"/var/www/base/extensions/bootstrap/widgets/TbEditableField.php",
-		"/var/www/base/extensions/bootstrap/widgets/TbGridView.php",
 		"/var/www/base/extensions/bootstrap/widgets/TbDataColumn.php",
 		"/var/www/base/extensions/bootstrap/widgets/TbEditableDetailView.php",
 		"/home/abolivar/Downloads/style.css",
@@ -218,7 +143,6 @@
 		"/var/www/base/config/config/aliases.php",
 		"/var/www/base/extensions/bootstrap/components/TbApi.php",
 		"/var/www/pos/protected/controllers/CategoryController.php",
-		"/var/www/pos/themes/admin/views/layouts/_header.php",
 		"/var/www/base/extensions/bootstrap/components/Bootstrap.php",
 		"/var/www/base/extensions/bootstrap/widgets/TbNavbar.php",
 		"/var/www/pos/themes/admin/views/category/_form.php",
@@ -266,45 +190,46 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/var/www/base/extensions/bootstrap/widgets/TbTabs.php",
+					"file": "/var/www/pos/protected/config/main.php",
 					"settings":
 					{
-						"buffer_size": 5476,
+						"buffer_size": 4512,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3187,
+								3187
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 796.0,
+						"translation.y": 1044.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/var/www/pos/themes/admin/views/site/index.php",
+					"file": "/var/www/pos/themes/admin/views/layouts/_header.php",
 					"settings":
 					{
-						"buffer_size": 14181,
+						"buffer_size": 6103,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								408,
-								408
+								475,
+								475
 							]
 						],
 						"settings":
@@ -321,146 +246,10 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/var/www/base/extensions/bootstrap/widgets/TbSelect2.php",
+					"file": "/var/www/pos/themes/admin/views/site/index.php",
 					"settings":
 					{
-						"buffer_size": 3038,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1607,
-								1607
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 990.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/var/www/base/extensions/bootstrap/widgets/TbGridView.php",
-					"settings":
-					{
-						"buffer_size": 5298,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3793,
-								3793
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 60.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/var/www/base/yii/framework/web/form/CFormElement.php",
-					"settings":
-					{
-						"buffer_size": 4706,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/var/www/base/yii/framework/web/helpers/CHtml.php",
-					"settings":
-					{
-						"buffer_size": 104623,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								72787,
-								72787
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 30499.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/var/www/pos/themes/admin/css/main.css",
-					"settings":
-					{
-						"buffer_size": 985,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								903,
-								903
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 538.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/var/www/pos/themes/admin/views/layouts/_header.php",
-					"settings":
-					{
-						"buffer_size": 5492,
+						"buffer_size": 14181,
 						"regions":
 						{
 						},
@@ -476,171 +265,6 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/var/www/pos/themes/admin/views/layouts/main.php",
-					"settings":
-					{
-						"buffer_size": 1070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1070,
-								1070
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/var/www/pos/themes/admin/css/bootstrap.min.css",
-					"settings":
-					{
-						"buffer_size": 114111,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1356,
-								1356
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
-						},
-						"translation.x": 7620.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/var/www/pos/protected/messages/es/app.php",
-					"settings":
-					{
-						"buffer_size": 9911,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 228.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "/var/www/pos/protected/messages/en/app.php",
-					"settings":
-					{
-						"buffer_size": 9092,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2188.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "/var/www/isret/protected/messages/es/zii.php",
-					"settings":
-					{
-						"buffer_size": 2300,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 29.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "/var/www/isret/protected/messages/es/app.php",
-					"settings":
-					{
-						"buffer_size": 4047,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								805,
-								805
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

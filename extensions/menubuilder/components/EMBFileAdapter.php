@@ -34,7 +34,16 @@ class EMBFileAdapter extends EMBDataAdapter
      * @param $b
      * @return int
      */
-    protected function sortMenus($a, $b)
+
+protected function sortMenus($a, $b)
+    {
+        if ($a->sortposition == $b->sortposition)
+             return 0;
+        else
+            return ($a->sortposition < $b->sortposition) ? -1 : 1;
+    }
+
+    /*protected function sortMenus($a, $b)
     {
         if ($a->sortposition == $b->sortposition)
         {
@@ -45,7 +54,7 @@ class EMBFileAdapter extends EMBDataAdapter
         else
             return ($a->sortposition < $b->sortposition) ? -1 : 1;
     }
-
+*/
     /**
      * Find all menu items with empty or the specified menuid
      *

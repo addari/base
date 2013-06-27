@@ -114,15 +114,15 @@ class RSuperfish extends CMenu
     }
     
     if($this->hoverIntent){
-      $cs->registerScriptFile($assets.'/js/hoverIntent.js');
+      $cs->registerScriptFile($assets.'/js/hoverIntent.js',Yii::app()->clientScript->coreScriptPosition);
     }    
     
-    $cs->registerScriptFile($assets.'/js/superfish.js');
+    $cs->registerScriptFile($assets.'/js/superfish.js',Yii::app()->clientScript->coreScriptPosition);
     $options= $this->makeOptions();
     
     $js = "jQuery('#{$id}')";
     if($this->supersubs['enable']){
-      $cs->registerScriptFile($assets.'/js/supersubs.js');
+      $cs->registerScriptFile($assets.'/js/supersubs.js',Yii::app()->clientScript->coreScriptPosition);
       //make subpersubs options
       $supersubsOptions = CJavaScript::encode($this->supersubs['options']);
       $js .= ".supersubs({$supersubsOptions})";

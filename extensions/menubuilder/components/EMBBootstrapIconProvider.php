@@ -178,7 +178,7 @@ class EMBBootstrapIconProvider implements IEMBIconProvider
         $assets = $module->getAssetsPath();
 
         $cs->registerCssFile($assets . '/multipleselectbox.css');
-        $cs->registerScriptFile($assets . '/jquery.multipleselectbox-min.js');
+        $cs->registerScriptFile($assets . '/jquery.multipleselectbox-min.js',Yii::app()->clientScript->coreScriptPosition);
     }
 
     /**

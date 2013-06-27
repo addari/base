@@ -284,10 +284,10 @@ class EMBListWidget extends CWidget
                 $cs->registerCssFile($assets . '/menubuilder.css');
 
             $cs->registerCoreScript('jquery');
-            $cs->registerScriptFile($assets . '/jquery.nestable.js');
+            $cs->registerScriptFile($assets . '/jquery.nestable.js',Yii::app()->clientScript->coreScriptPosition);
 
             if($this->useJson2)
-                $cs->registerScriptFile($assets . '/jquery.json-2.4.min.js');
+                $cs->registerScriptFile($assets . '/jquery.json-2.4.min.js',Yii::app()->clientScript->coreScriptPosition);
 
             self::$_scriptsPublished = true;
         }

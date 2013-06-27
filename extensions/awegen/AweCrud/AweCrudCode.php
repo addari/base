@@ -369,7 +369,6 @@ else
             'value'=>'\$data->{$column->name}',
             #'filter'=>'false',
             #'htmlOptions' => array('style' => 'text-align:center;min-width:20px;')
-
             )";
     }
 
