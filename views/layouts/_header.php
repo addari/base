@@ -10,7 +10,8 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 		<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-		<link href="<?php echo Yii::app()->params['urlBaseLayout'] ?>bootstrap.min.css" rel="stylesheet">
+		<!--<link href="<?php echo Yii::app()->params['urlBaseLayout'] ?>bootstrap.min.css" rel="stylesheet">-->
+		<link href="../base/views/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	</head>
 <?php else: ?>
