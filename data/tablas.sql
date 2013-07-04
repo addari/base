@@ -153,7 +153,7 @@ CREATE TABLE `cruge_authitemchild` (
 ENGINE = InnoDB;
 
 
-////Translator
+#Translator
 
 CREATE TABLE SourceMessage
 (
