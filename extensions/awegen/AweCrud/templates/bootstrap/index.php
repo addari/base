@@ -54,7 +54,7 @@ $this->endWidget();
 <?php echo '<?php'; ?> 
 $provider=$model->search();
 $provider->pagination->pageSize=10;
-$this->widget('bootstrap.widgets.TTbExtendedGridView', array(
+$this->widget('bootstrap.widgets.TbExtendedGridView', array(
 'id' => '<?php echo $this->class2id($this->modelClass); ?>-grid',
 'type'=>'striped bordered condensed',
 'dataProvider' => $provider,
