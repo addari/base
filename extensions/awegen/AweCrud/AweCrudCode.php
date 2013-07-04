@@ -208,7 +208,7 @@ public function generateField($column, $modelClass, $search = false) {
             }
             //requires EActiveRecordRelationBehavior
             //return "echo \$form->dropDownList(\$model, '{$relation[0]}', CHtml::listData({$relation[3]}::model()->findAll(),'{$foreign_pk}', '{$foreign_identificationColumn}'){$prompt})";
-            return "    \$this->widget('boostrap.widget.TbSelect2', array(
+            return "    \$this->widget('bootstrap.widgets.TbSelect2', array(
                 'model' => \$model,
                 'attribute' => '{$relation[0]}',
                 'data' => CHtml::encodeArray(CHtml::listData({$relation[3]}::model()->findAll(), '{$foreign_pk}', '{$foreign_identificationColumn}')),
@@ -220,7 +220,7 @@ public function generateField($column, $modelClass, $search = false) {
     'allowClear' => false,
     'asDropDownList' => true,
     ),
-));";
+))";
 } else {
 
     if (in_array(strtolower($column->dbType), $this->booleanTypes))
@@ -348,7 +348,7 @@ if (strtoupper($column->dbType) == 'TINYINT(1)' || strtoupper($column->dbType) =
             'tongleAction' => '',
             'checkedIcon'=>'icon-ok text-success',
             'uncheckedIcon'=>'icon-remove text-error',
-            'class' => 'boostrap.widgets.TbToggleColumn',
+            'class' => 'bootstrap.widgets.TbToggleColumn',
             'filter' => array('0' => Yii::t('app', 'No'), '1' => Yii::t('app', 'Yes')),
             'htmlOptions' => array('style' => 'text-align:center;min-width:20px;')
             )";
