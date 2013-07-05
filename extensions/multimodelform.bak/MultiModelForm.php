@@ -77,6 +77,8 @@ class MultiModelForm extends CWidget
      */
     public $addItemAsButton = false;
 
+    public $additemHtmlOptions = array();
+
     /**
      * Alert text if options['limit']>0 and the limit is reached
      * See the options property below
@@ -1314,7 +1316,8 @@ class MultiModelRenderForm extends CForm
             return CHtml::tag('a',
                 array('id' => $this->parentWidget->id,
                     'href' => '#',
-                    'rel' => '.' . $this->parentWidget->getCopyClass()
+                    'rel' => '.' . $this->parentWidget->getCopyClass(),
+                    //'class'=>$additemHtmlOptions['class']
                 ),
                 $this->parentWidget->addItemText
             );
@@ -1331,9 +1334,9 @@ class MultiModelRenderForm extends CForm
         $tag = $this->parentWidget->rowWrapper['tag'];
         $htmlOptions = $this->parentWidget->rowWrapper['htmlOptions'];
 
-        $htmlOptions['class'] = !empty($htmlOptions['class']) ? $htmlOptions['class'] . ' mmf_additem' : 'mmf_additem';
+        $additemhtmlOptions['class'] = !empty($additemhtmlOptions['class']) ? $additemhtmlOptions['class'] . ' mmf_additem' : 'mmf_additem';
 
-        return CHtml::tag($tag, $htmlOptions, $this->getAddLink());
+        return CHtml::tag($tag, $additemhtmlOptions, $this->getAddLink());
     }
 
     /**
