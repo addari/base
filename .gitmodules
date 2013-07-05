@@ -4,3 +4,6 @@
 [submodule "extensions/select2.old"]
 	path = extensions/select2.old
 	url = https://github.com/anggiaj/ESelect2.git
+[submodule "extensions/select2"]
+	path = extensions/select2
+	url = ../../anggiaj/ESelect2.git
