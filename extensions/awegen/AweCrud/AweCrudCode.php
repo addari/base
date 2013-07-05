@@ -208,7 +208,7 @@ public function generateField($column, $modelClass, $search = false) {
             }
             //requires EActiveRecordRelationBehavior
             //return "echo \$form->dropDownList(\$model, '{$relation[0]}', CHtml::listData({$relation[3]}::model()->findAll(),'{$foreign_pk}', '{$foreign_identificationColumn}'){$prompt})";
-            return "    \$this->widget('bootstrap.widgets.TbSelect2', array(
+            return "    \$this->widget('ext.select2.ESelect2', array(
                 'model' => \$model,
                 'attribute' => '{$relation[0]}',
                 'data' => CHtml::encodeArray(CHtml::listData({$relation[3]}::model()->findAll(), '{$foreign_pk}', '{$foreign_identificationColumn}')),
@@ -217,7 +217,7 @@ public function generateField($column, $modelClass, $search = false) {
                     ),
 'options' => array(
     'placeholder' => Yii::t('app', 'Select'),
-    'allowClear' => false,
+    'allowClear' => true,
     'asDropDownList' => true,
     ),
 ))";
@@ -236,7 +236,7 @@ public function generateField($column, $modelClass, $search = false) {
         $string .= ";\nif (!empty(\$model->{$column->name})){ ?> <div class=\"right\"><a href=\"<?php echo \$model->{$column->name} ?>\" target=\"_blank\" title=\"<?php echo Awecms::generateFriendlyName('{$column->name}') ?>\"><img src=\"<?php echo \$model->{$column->name} ?>\"  alt=\"<?php echo Awecms::generateFriendlyName('{$column->name}') ?>\" title=\"<?php echo Awecms::generateFriendlyName('{$column->name}') ?>\"/></a></div><?php }";
         return $string;
     } else if (strtolower($column->dbType) == 'longtext') {
-        return "\$this->widget('EMarkitupWidget', array(
+        return "\$this->widget('ERedactorWidget', array(
             'model' => \$model,
             'attribute' => '{$column->name}',
             ));";

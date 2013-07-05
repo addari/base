@@ -4,10 +4,10 @@ return array(
     'menubuilder'               =>array(
         'supportedScenarios'    =>array('backend' => 'Backend', 'frontend' => 'Frontend', 'dashboard' => 'Dashboard'),
         'theme'                 =>'bootstrap', //comment for bluegrid theme (=default)
-        'checkInstall'          =>false, //uncomment after first usage
+        'checkInstall'          =>true, //uncomment after first usage
         //'cacheDuration'       => -1, //uncomment for disabling the menucaching
-        //'languages'           =>array('de','en_us'),
-        //'dataAdapterClass'    => 'EMBDbAdapter', //'EMBMongoDbAdapter', //'EMBDbAdapter',
+        'languages'           =>array('en_us'),
+        'dataAdapterClass'    => 'EMBDbAdapter', //'EMBMongoDbAdapter', //'EMBDbAdapter',
         //the available menus/lists for the preview
         'previewMenus'          =>array(
             'bootstrapnavbar'   =>'Bootstrap Navbar',
