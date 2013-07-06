@@ -61,7 +61,10 @@ return array(
         // en la siguiente puedes especificar el valor "ui" o "column2" para que use el layout
         // de fabrica, es basico pero funcional.  si pones otro valor considera que cruge
         // requerirá de un portlet para desplegar un menu con las opciones de administrador.
-        'generalUserManagementLayout' => 'ui',
+        'generalUserManagementLayout' => '//layouts/column1',
+        'useCGridViewClass'=>'bootstrap.widgets.TbExtendedGridView',
+        'buttonStyle'=>'bootstrap',
+        //'availableAuthModes'=>'username',
     ),
 
 );

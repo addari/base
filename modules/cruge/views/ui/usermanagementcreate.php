@@ -25,15 +25,22 @@
 		<?php echo $form->labelEx($model,'newPassword'); ?>
 		<?php echo $form->textField($model,'newPassword'); ?>
 		<?php echo $form->error($model,'newPassword'); ?>
-		
-		<script>
+		<?php 
+$script = <<< EOD
+
 			function fnSuccess(data){
 				$('#CrugeStoredUser_newPassword').val(data);
 			}
 			function fnError(e){
 				alert("error: "+e.responseText);
-			}
-		</script>
+			}*/
+EOD;
+
+Yii::app()->clientScript->registerScript('someId', $script,CClientScript::POS_END);
+
+
+		 ?>
+
 		<?php echo CHtml::ajaxbutton(
 			CrugeTranslator::t("Generar una nueva clave")
 			,Yii::app()->user->ui->ajaxGenerateNewPasswordUrl

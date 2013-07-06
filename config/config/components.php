@@ -6,7 +6,7 @@ return array(
     'responsiveCss'           =>true,
     'coreCss'                 =>true,
     'fontAwesomeCss'          =>false,
-    //'enableCdn'             => true,
+    'enableCdn'               => true,
   ),
   'clientScript'             =>array('coreScriptPosition' =>CClientScript::POS_END,),
   'coreMessages'             =>array('basePath' => 'protected/messages',),
@@ -36,7 +36,7 @@ return array(
     //'translatedMessageTable' => 'tbl_message'
   ),
   'translate'                 =>array(
-    'class'                   =>'translate.components.Ei18n',
+    'class'                   =>'ext.translate.components.Ei18n',
     'createTranslationTables' =>false,
     'connectionID'            =>'db',
     'languages'               =>array(
@@ -51,6 +51,24 @@ return array(
     'allowAutoLogin'          =>true,
     'class'                   =>'application.modules.cruge.components.CrugeWebUser',
     'loginUrl'                =>array('/cruge/ui/login'),
+  ),
+  'urlManager' => array(
+  'urlFormat' => 'path',
+  'showScriptName' => false, // Linea añadida
+  //'showScriptName'=>false,
+  #'urlSuffix'=>'.php',   // Linea añadida
+  'rules' => array(
+    '<controller:\w+>/<id:\d+>' => '<controller>/view',
+    '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
+    '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+    '<action:(login|logout|editprofile|usermanagementcreate|usermanagementadmin|fieldsadminlist|fieldsadmincreate|rbaclistroles|rbaclisttasks|rbaclistops|sessionadmin|systemupdate)>' => 'cruge/ui/<action>',
+
+
+
+  ),
+),
+
+/*
   ),
 // uncomment the following to show log messages on web pages
 /*
@@ -68,17 +86,6 @@ array(
 // uncomment the following to enable URLs in path-format
 
 */
-/*        'urlManager' => array(
-'urlFormat' => 'path',
-'showScriptName' => false, // Linea añadida
-//'showScriptName'=>false,
-#'urlSuffix'=>'.php',   // Linea añadida
-'rules' => array(
-'<controller:\w+>/<id:\d+>' => '<controller>/view',
-'<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
-'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-),
-),
 /* 'db'=>array(
 'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
 ), */
